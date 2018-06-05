@@ -31,3 +31,9 @@ Utilities.cleanArtboardName = function (name) {
 
 	return cleanedUpName;
 };
+
+Utilities.camelize = function (str) {
+	return str.split(" ").map(function(word) {
+		return word.charAt(0).toUpperCase() + word.substring(1, word.length);
+	}).join("");
+}
